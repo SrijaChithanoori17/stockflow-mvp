@@ -1,10 +1,21 @@
+# Maven / Java
 HELP.md
 target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+*.class
+*.jar
+*.war
+*.nar
+*.ear
 
-### STS ###
+# Logs
+*.log
+hs_err_pid*
+replay_pid*
+
+# STS
 .apt_generated
 .classpath
 .factorypath
@@ -13,24 +24,23 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
+# IntelliJ
 .idea
 *.iws
 *.iml
 *.ipr
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
+# VS Code
 .vscode/
+
 # Node / React
 node_modules/
 **/node_modules/
@@ -44,3 +54,11 @@ stockflow-frontend/dist/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.nar
+*.ctxt
+.mtj.tmp/
