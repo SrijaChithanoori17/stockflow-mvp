@@ -1,0 +1,253 @@
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6fa;
+  color: #1e293b;
+}
+
+.app { display: flex; min-height: 100vh; }
+
+.sidebar {
+  width: 235px;
+  background: #172554;
+  color: white;
+  padding: 25px 18px;
+}
+
+.sidebar h2 { margin-bottom: 40px; }
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px;
+  border-radius: 8px;
+  color: #cbd5e1;
+}
+
+.nav.active { background: #2563eb; color: white; }
+
+.main { flex: 1; padding: 35px; min-width: 0; }
+
+header, .panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+header h1 { margin-bottom: 5px; }
+header p { color: #64748b; }
+
+.primary {
+  background: #2563eb;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin: 30px 0;
+}
+
+.stat, .panel {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px #00000008;
+}
+
+.stat p { color: #64748b; }
+.stat h2 { font-size: 25px; }
+
+.panel { padding: 24px; }
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #ddd;
+  padding: 9px;
+  border-radius: 8px;
+}
+
+.search input { border: 0; outline: 0; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 22px; }
+th, td { text-align: left; padding: 15px 10px; border-bottom: 1px solid #eee; }
+th { color: #64748b; }
+
+.good, .low {
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.good { background: #dcfce7; color: #15803d; }
+.low { background: #fee2e2; color: #dc2626; }
+
+.icon-btn {
+  background: transparent;
+  border: 0;
+  padding: 7px;
+  cursor: pointer;
+  color: #2563eb;
+}
+
+.danger { color: #dc2626; }
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: #0008;
+  display: grid;
+  place-items: center;
+  padding: 15px;
+  z-index: 10;
+}
+
+.form {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: min(450px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  display: grid;
+  gap: 14px;
+}
+
+.form label { display: grid; gap: 6px; font-size: 14px; }
+.form input { padding: 10px; border: 1px solid #ddd; border-radius: 6px; }
+
+.table-wrap { overflow-x: auto; }
+
+@media(max-width: 850px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .sidebar { width: 170px; }
+  .main { padding: 18px; }
+}
+
+@media(max-width: 550px) {
+  .sidebar { width: 65px; padding: 10px; }
+  .sidebar h2 { font-size: 12px; }
+  .nav { font-size: 0; }
+  .stats { grid-template-columns: 1fr; }
+  header { align-items: flex-start; flex-direction: column; }
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3f5fa;
+  padding: 20px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 430px;
+  background: white;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
+
+.auth-card h1 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.auth-card > p {
+  text-align: center;
+  color: #64748b;
+}
+
+.auth-card h2 {
+  margin-top: 28px;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.auth-card label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-weight: 600;
+}
+
+.auth-card input {
+  padding: 12px;
+  border: 1px solid #dce1e8;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.auth-submit {
+  width: 100%;
+  justify-content: center;
+  padding: 13px;
+  margin-top: 8px;
+}
+
+.auth-switch {
+  margin-top: 22px;
+}
+
+.auth-switch button {
+  border: none;
+  background: none;
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+.success-message {
+  background: #dcfce7;
+  color: #166534;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+.sidebar-user {
+  margin-top: auto;
+  padding-top: 25px;
+  color: white;
+}
+
+.sidebar-user small {
+  display: block;
+  opacity: 0.7;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
