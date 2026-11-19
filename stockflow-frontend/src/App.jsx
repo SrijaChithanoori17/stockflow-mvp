@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 import "./App.css";
 
-const BASE_URL = "http://localhost:8080/api";
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8080/api";
 const AUTH_API = `${BASE_URL}/auth`;
 const API = `${BASE_URL}/products`;
 const DASHBOARD_API = `${BASE_URL}/dashboard`;
